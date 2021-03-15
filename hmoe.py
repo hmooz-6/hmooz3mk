@@ -145,7 +145,7 @@ elif swich==2:
         
         for userId in Tass2(listf):
             try:
-                sub_client.invite_to_vc(chatId=chatId, userId=userId)
+                sub_client.invite_to_vc(chatId=chatId,userId=userId)
                 cpt=cpt+1
                 print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id \033[1;92m= \033[0m",userId)
             except:
@@ -159,7 +159,7 @@ elif swich==3:
         
         for userId in Tass(listn):
             try:
-                sub_client.invite_to_vc(chatId=chatId, userId=userId)
+                sub_client.invite_to_vc(chatId=chatId,userId=userId)
                 cpt=cpt+1
                 print(cpt , "\033[1;93m ) \033[1;92m-\033[1;93m user id \033[1;92m= \033[0m",userId)
             except:
