@@ -123,7 +123,7 @@ elif swich==2:
          linko=client.get_from_code(link)
          tst=True
          
-    userIdf=linko.objectId
+ 
     nemmm=0
     cpt=0
     while maxo>nemmm and len(sub_client.get_user_followers(userId=userIdf,start=nemmm,size=25).userId)!=0:
