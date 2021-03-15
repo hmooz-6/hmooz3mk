@@ -72,7 +72,7 @@ while tst==False:
         if exx=='n' or exx=='N' or exx=='no':
             os._exit(1)
             
-chatId=infoo.objectId
+userid=infoo.objectId
 comId=infoo.path[1:infoo.path.index("/")]
 sub_client=amino.SubClient(comId=comId,profile=client.profile)
 swich=0
@@ -109,7 +109,7 @@ if swich==1:
         
         for userId in Tass(lista):
             try:
-                sub_client.invite_to_vc(chatId=chatId,userId=userId)
+                sub_client.follow(userId=userId)
                 cpt=cpt+1
                 print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id\033[1;92m =\033[0m ",userId)
             except:
@@ -122,21 +122,7 @@ elif swich==2:
          link=input("\033[1;93m# give me link of profile \033[1;92m: \033[0m")
          linko=client.get_from_code(link)
          tst=True
-         if linko.objectType!=0:
-             print (" \033[1;93mnot profile url !\033[0m")
-             tst=False
-         fchg=linko.path[1:infoo.path.index("/")]
-         if fchg!=comId:
-             tst=False
-             print ("\033[1;93mis not profile of this community !\033[0m")
-      except:
-          tst=False
-          print("\033[1;93m# verify your url \033[0m")
-          
-      if tst==False:
-          exx=input("\033[1;93m# to be continue ?\033[1;92m y/n \033[0m: \033[0m")
-          if exx=='n' or exx=='N' or exx=='no':
-              os._exit(1)
+         
     userIdf=linko.objectId
     nemmm=0
     cpt=0
@@ -145,7 +131,7 @@ elif swich==2:
         
         for userId in Tass2(listf):
             try:
-                sub_client.invite_to_vc(chatId=chatId,userId=userId)
+                sub_client.follow(userId=userId)
                 cpt=cpt+1
                 print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id \033[1;92m= \033[0m",userId)
             except:
