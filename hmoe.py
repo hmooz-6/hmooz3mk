@@ -109,6 +109,10 @@ if swich==1:
         
         for userId in Tass(lista):
             try:
+                sub_client.invite_to_chat(chatId=chatId,userId=userId)
+                cpt=cpt+1
+                print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id\033[1;92m =\033[0m ",userId)
+
                 sub_client.invite_to_vc(chatId=chatId,userId=userId)
                 cpt=cpt+1
                 print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id\033[1;92m =\033[0m ",userId)
