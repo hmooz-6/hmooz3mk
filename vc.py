@@ -173,44 +173,25 @@ elif swich==3:
  
 
 elif swich==4:
-    tst=False
-    while tst==False:
-      try:
-         link=input("\033[1;93m# give me link of profile \033[1;92m: \033[0m")
-         linko=client.get_from_code(link)
-         tst=True
-         if linko.objectType!=0:
-             print (" \033[1;93mnot profile url !\033[0m")
-             tst=False
-         fchg=linko.path[1:infoo.path.index("/")]
-         if fchg!=comId:
+    nemmm=0
+cpt=0
+link=input("\033[1;93m# give me link of   profile \033[1;92m: \033[0m")
+linko=client.get_from_code(link)
+if linko.objectType!=0:
+                                     print (" \033[1;93mnot profile url !\033[0m")
+            
+fchg=linko.path[1:infoo.path.index("/")]
+if fchg!=comId:
              tst=False
              print ("\033[1;93mis not profile of this community !\033[0m")
-      except:
-          tst=False
-          print("\033[1;93m# verify your url \033[0m")
-          
-      if tst==False:
-          exx=input("\033[1;93m# to be continue ?\033[1;92m y/n \033[0m: \033[0m")
-          if exx=='n' or exx=='N' or exx=='no':
-              os._exit(1)
-    userIdf=linko.objectId
-    nemmm=0
-    cpt=0
-    while maxo>nemmm and len(sub_client.get_user_followers(userId=userIdf,start=nemmm,size=25).userId)!=0:
-        listf=sub_client.get_user_followers(userId=userIdf,start= nemmm,size= 25)
-        
-        for userId in Tass2(listf):
-            try:
-                sub_client.invite_to_chat(userId=userIdf,chatId=chatId)
-                cpt=cpt+1
-                print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id\033[1;92m =\033[0m ",userId)
-                sub_client.invite_to_vc(chatId=chatId, userId=userIdf)
-                cpt=cpt+1
-                print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id \033[1;92m= \033[0m",userId)
-            except:
-                ffffff=True
-        nemmm=nemmm+25
+
+userIdf=linko.objectId
+sub_client.invite_to_chat(chatId=chatId,userId=userIdf)     
+while True:    
+                sub_client.invite_to_vc(chatId=chatId,userId=userIdf)
+                
+                print (userIdf)
+
 
 
 if swich==5:
