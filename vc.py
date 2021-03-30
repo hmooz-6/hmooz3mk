@@ -191,7 +191,7 @@ while True:
                 sub_client.invite_to_vc(chatId=chatId,userId=userIdf)
                 
                 print (userIdf)
-
+os._exit(1)
 
 
 if swich==5:
