@@ -15,15 +15,6 @@ def Tass(data):
            listusers.append(userId)
     return listusers
 os.system('clear')
-print("\033[1;32m ______                      __    __               ")
-print("\033[1;32m|      \                    |  \  |  \              ")
-print("\033[1;32m \$$$$$$ _______  __     __  \$$ _| $$_     ______  ")
-print("\033[1;32m  | $$  |       \|  \   /  \|  \|   $$ \   /      \ ")
-print("\033[1;32m  | $$  | $$$$$$$\\$$\ /  $$| $$ \$$$$$$  |  $$$$$$\ ")
-print("\033[1;32m  | $$  | $$  | $$ \$$\  $$ | $$  | $$ __ | $$    $$")
-print("\033[1;32m _| $$_ | $$  | $$  \$$ $$  | $$  | $$|  \| $$$$$$$$")
-print("\033[1;32m|   $$ \| $$  | $$   \$$$   | $$   \$$  $$ \$$     \ ")
-print("\033[1;32m \$$$$$$ \$$   \$$    \$     \$$    \$$$$   \$$$$$$$")
 print("\033[1;32m                                                    ")
 print("\033[1;32m                                                    ")
 print("\033[1;31m                                                    ")
@@ -35,7 +26,7 @@ print("\033[1;31m| $$$$$$$\|  $$$$$$\\$$$$$$                      ")
 print("\033[1;31m| $$  | $$| $$  | $$ | $$ __                        ")
 print("\033[1;31m| $$__/ $$| $$__/ $$ | $$|  \                     ")  
 print("\033[1;31m| $$    $$ \$$    $$  \$$  $$                     ")  
-print("\033[1;31m \$$$$$$$   \$$$$$$    \$$$$    \033[1;32m script by \033[1;36mhmooz ")  
+print("\033[1;31m \$$$$$$$   \$$$$$$    \$$$$    \n\033[1;32m script by \033[1;36mkirax \n\n\033[1;33m  edit by hmooz ")  
 print('\n\033[0m')              
 client=amino.Client()
 ss=0
@@ -82,7 +73,7 @@ while tst==False:
         tst=True
         
         swich=int(input("\033[1;93mchoose : \n\033[1;92m1 \033[1;93m- online members \n\033[1;92m2\033[1;93m - followers of user \n\033[1;92m3 \033[1;93m- new members \n\033[1;92m4 \033[1;93m- One person \n\033[1;92m5 \033[1;93m- Voice Online Bombing  \n\033[1;92mwhich one \033[1;93m: \033[0m"))
-        if swich<0 or swich>5:
+        if swich<1 or swich>5:
             print("\033[1;93mplease ... choose 1 or 2 or 3 or 4 or 5 \033[0m")
             tst=False
     except :
@@ -119,7 +110,8 @@ if swich==1:
             except:
                 ffffff=True
         nemmm=nemmm+25
-elif swich==2:
+        os._exit(1)
+if swich==2:
     tst=False
     while tst==False:
       try:
@@ -154,8 +146,9 @@ elif swich==2:
                 print(cpt , "\033[1;93m ) \033[1;92m- \033[1;93muser id \033[1;92m= \033[0m",userId)
             except:
                 ffffff=True
-        nemmm=nemmm+25
-elif swich==3:
+        nemmm=nemmm+2
+        os._exit(1)
+if swich==3:
     nemmm=0
     cpt=0
     while maxo>nemmm and len(sub_client.get_all_users(start=nemmm,size=25).profile.userId)!=0:
@@ -170,9 +163,9 @@ elif swich==3:
                 ffffff=True
                 
         nemmm=nemmm+25
- 
+        os._exit(1)
 
-elif swich==4:
+if swich==4:
     nemmm=0
 cpt=0
 link=input("\033[1;93m# give me link of   profile \033[1;92m: \033[0m")
@@ -191,7 +184,7 @@ while True:
                 sub_client.invite_to_vc(chatId=chatId,userId=userIdf)
                 
                 print (userIdf)
-os._exit(1)
+                os._exit(1)
 
 
 if swich==5:
