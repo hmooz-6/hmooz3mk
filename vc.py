@@ -110,11 +110,11 @@ if swich==1:
             except:
                 ffffff=True
         nemmm=nemmm+25
-        os._exit(1)
+           os._exit(1)
 if swich==2:
     tst=False
     while tst==False:
-      try:
+      
          link=input("\033[1;93m# give me link of profile \033[1;92m: \033[0m")
          linko=client.get_from_code(link)
          tst=True
@@ -132,7 +132,7 @@ if swich==2:
       if tst==False:
           exx=input("\033[1;93m# to be continue ?\033[1;92m y/n \033[0m: \033[0m")
           if exx=='n' or exx=='N' or exx=='no':
-              os._exit(1)
+           os._exit(1)
     userIdf=linko.objectId
     nemmm=0
     cpt=0
